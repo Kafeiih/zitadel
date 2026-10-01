@@ -10,10 +10,12 @@ import { BaseButton, SignInWithIdentityProviderProps } from "./base-button";
 const googleBrandedClasses = clsx(
   "h-[50px] px-3! text-sm font-medium",
   "border! border-[#747775]! bg-white! text-[#1F1F1F]!",
-  "hover:border-[#747775]! hover:bg-[#F8F8F8]! focus:border-[#747775]!",
+  // Material 3 state layers: 8% (hover) and 12% (pressed) of the #1F1F1F text color over white.
+  "hover:border-[#747775]! hover:bg-[#EDEDED]! active:bg-[#E4E4E4]! focus:border-[#747775]!",
+  "hover:shadow-[0_1px_2px_0_rgba(60,64,67,0.30),0_1px_3px_1px_rgba(60,64,67,0.15)]!",
   // Same light theme in dark mode, so the brand looks identical in both themes.
   "dark:border-[#747775]! dark:bg-white! dark:text-[#1F1F1F]!",
-  "dark:hover:border-[#747775]! dark:hover:bg-[#F8F8F8]! dark:focus:border-[#747775]!",
+  "dark:hover:border-[#747775]! dark:hover:bg-[#EDEDED]! dark:active:bg-[#E4E4E4]! dark:focus:border-[#747775]!",
 );
 
 export const SignInWithGoogleBranded = forwardRef<HTMLButtonElement, SignInWithIdentityProviderProps>(
