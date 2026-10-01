@@ -11,9 +11,10 @@ const claveUnicaClasses = clsx(
   "border-transparent! bg-[#0F69C4]! text-white!",
   "hover:border-transparent! hover:bg-[#0B4E91]! active:bg-[#07305A]!",
   "focus:border-transparent! focus-visible:bg-[#0B4E91]! focus-visible:outline-4 focus-visible:outline-offset-0 focus-visible:outline-[#FFBE5C]!",
-  "dark:border-transparent! dark:bg-[#625AF6]! dark:text-white!",
-  "dark:hover:border-transparent! dark:hover:bg-[#4943B6]! dark:active:bg-[#2D2971]!",
-  "dark:focus:border-transparent! dark:focus-visible:bg-[#4943B6]! dark:focus-visible:outline-[rgba(216,215,250,1)]!",
+  // Same official colors in dark mode, so the brand looks identical in both themes.
+  "dark:border-transparent! dark:bg-[#0F69C4]! dark:text-white!",
+  "dark:hover:border-transparent! dark:hover:bg-[#0B4E91]! dark:active:bg-[#07305A]!",
+  "dark:focus:border-transparent! dark:focus-visible:bg-[#0B4E91]! dark:focus-visible:outline-[#FFBE5C]!",
 );
 
 export const SignInWithClaveUnica = forwardRef<HTMLButtonElement, SignInWithIdentityProviderProps>(

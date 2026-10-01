@@ -5,14 +5,15 @@ import { forwardRef } from "react";
 import { Translated } from "../translated";
 import { BaseButton, SignInWithIdentityProviderProps } from "./base-button";
 
-// Follows https://developers.google.com/identity/branding-guidelines (neutral light and dark themes).
+// Follows https://developers.google.com/identity/branding-guidelines (light theme).
 // The important modifiers override the theme defaults of BaseButton, whose classes are not merged.
 const googleBrandedClasses = clsx(
   "h-[50px] px-3! text-sm font-medium",
   "border! border-[#747775]! bg-white! text-[#1F1F1F]!",
   "hover:border-[#747775]! hover:bg-[#F8F8F8]! focus:border-[#747775]!",
-  "dark:border-[#8E918F]! dark:bg-[#131314]! dark:text-[#E3E3E3]!",
-  "dark:hover:border-[#8E918F]! dark:hover:bg-[#1F1F20]! dark:focus:border-[#8E918F]!",
+  // Same light theme in dark mode, so the brand looks identical in both themes.
+  "dark:border-[#747775]! dark:bg-white! dark:text-[#1F1F1F]!",
+  "dark:hover:border-[#747775]! dark:hover:bg-[#F8F8F8]! dark:focus:border-[#747775]!",
 );
 
 export const SignInWithGoogleBranded = forwardRef<HTMLButtonElement, SignInWithIdentityProviderProps>(
