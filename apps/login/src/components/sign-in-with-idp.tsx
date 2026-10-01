@@ -7,6 +7,7 @@ import { ReactNode, useActionState } from "react";
 import { Alert } from "./alert";
 import { AutoSubmitForm } from "./auto-submit-form";
 import { SignInWithIdentityProviderProps } from "./idps/base-button";
+import { getBrandedIdpButton } from "./idps/branded-idp-button";
 import { SignInWithApple } from "./idps/sign-in-with-apple";
 import { SignInWithAzureAd } from "./idps/sign-in-with-azure-ad";
 import { SignInWithGeneric } from "./idps/sign-in-with-generic";
@@ -58,7 +59,8 @@ export function SignInWithIdp({
       [IdentityProviderType.ZITADEL]: SignInWithZitadel,
     };
 
-    const Component = components[type];
+    // A brand matched by IdP name wins over the type map and applies to any IdP type.
+    const Component = getBrandedIdpButton(name) ?? components[type];
     return Component ? (
       <form action={action} className="flex" key={`idp-${index}`}>
         <input type="hidden" name="id" value={id} />
