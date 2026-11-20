@@ -5,7 +5,7 @@ import { NextIntlClientProvider } from "next-intl";
 import { afterEach, describe, expect, test, vi } from "vitest";
 import { SignInWithIdp } from "./sign-in-with-idp";
 
-vi.mock("@/lib/server/idp", () => ({
+vi.mock("@/lib/actions/idp", () => ({
   redirectToIdp: vi.fn(),
 }));
 
