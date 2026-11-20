@@ -1,4 +1,7 @@
 {
+  "src/lib/actions/claveunica-logout.ts": [
+    "startClaveUnicaLogout"
+  ],
   "src/lib/actions/device.ts": [
     "approveDeviceAuthorization",
     "denyDeviceAuthorization"

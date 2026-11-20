@@ -95,6 +95,7 @@ export default async function Page(props: { searchParams: Promise<Record<string 
             sessions={sessions}
             logoutHint={logoutHint}
             postLogoutRedirectUri={postLogoutRedirectUri}
+            logoutToken={logoutToken}
             organization={organization ?? defaultOrganization}
           />
         </div>
